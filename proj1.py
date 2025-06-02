@@ -1,6 +1,8 @@
 import argparse
 import re
 import hashlib
+import requests
+import colorama
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--password",required=True)
