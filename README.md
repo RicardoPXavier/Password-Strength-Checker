@@ -26,7 +26,7 @@ Um mini-projeto em Python que verifica a força de uma senha e se ela já foi co
 
 ---
 
-## 📦 Requisitos
+## Requisitos
 
 - Python 3.7+
 - Bibliotecas:
