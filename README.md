@@ -6,29 +6,29 @@ Um verificador de força de senhas em Python que analisa a segurança de senhas,
 
 ## Funcionalidades
 
-### 🔍 Verificação de Força da Senha
-- ✅ Verifica tamanho mínimo (8 caracteres)
-- ✅ Presença de letras maiúsculas
-- ✅ Presença de letras minúsculas
-- ✅ Presença de números
-- ✅ Presença de caracteres especiais
-- ✅ Classificação em: Muito Fraca, Fraca, Média, Forte
+### Verificação de Força da Senha
+- Verifica tamanho mínimo (8 caracteres)
+- Presença de letras maiúsculas
+- Presença de letras minúsculas
+- Presença de números
+- Presença de caracteres especiais
+- Classificação em: Muito Fraca, Fraca, Média, Forte
 
-### 🛡️ Verificação de Vazamentos
-- ✅ Consulta a API Have I Been Pwned
-- ✅ Usa hash SHA-1 para proteção da senha
-- ✅ Informa quantas vezes a senha foi encontrada em vazamentos
+### Verificação de Vazamentos
+- Consulta a API Have I Been Pwned
+- Usa hash SHA-1 para proteção da senha
+- Informa quantas vezes a senha foi encontrada em vazamentos
 
-### 🎲 Gerador de Senhas Seguras
-- ✅ Gera senhas aleatórias criptograficamente seguras
-- ✅ Comprimento personalizável (mínimo 8 caracteres)
-- ✅ Opção de incluir/excluir símbolos especiais
-- ✅ Garante presença de todos os tipos de caracteres
+### Gerador de Senhas Seguras
+-  Gera senhas aleatórias criptograficamente seguras
+-  Comprimento personalizável (mínimo 8 caracteres)
+-  Opção de incluir/excluir símbolos especiais
+-  Garante presença de todos os tipos de caracteres
 
-### 🎨 Interface Colorida
-- ✅ Saída colorida no terminal
-- ✅ Indicadores visuais (✅/❌)
-- ✅ Cores para diferentes níveis de segurança
+###  Interface Colorida
+-  Saída colorida no terminal
+-  Indicadores visuais (✅/❌)
+-  Cores para diferentes níveis de segurança
 
 ---
 
@@ -104,22 +104,22 @@ ANÁLISE DE SEGURANÇA DA SENHA
 Tamanho: 12 caracteres
 
 Critérios de segurança:
-✅ Letras maiúsculas: Sim
-✅ Letras minúsculas: Sim
-✅ Números: Sim
-✅ Caracteres especiais: Sim
+Letras maiúsculas: Sim
+Letras minúsculas: Sim
+Números: Sim
+Caracteres especiais: Sim
 
 Força da senha: Forte
 
 Verificando vazamentos de dados...
-✅ Boa notícia: Esta senha não foi encontrada em vazamentos conhecidos.
+Boa notícia: Esta senha não foi encontrada em vazamentos conhecidos.
 ```
 
 ---
 
 ## Segurança e Privacidade
 
-🔒 **Sua senha nunca é enviada completa para a internet!**
+**Sua senha nunca é enviada completa para a internet!**
 
 O programa usa a técnica k-Anonymity da API Have I Been Pwned:
 1. Cria um hash SHA-1 da sua senha
@@ -140,7 +140,3 @@ Isso significa que o Have I Been Pwned nunca recebe sua senha real!
 - `main()`: Função principal com interface de linha de comando
 
 ---
-
-## Contribuições
-
-Sinta-se à vontade para contribuir com melhorias, correções de bugs ou novas funcionalidades!
