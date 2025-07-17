@@ -105,9 +105,9 @@ def generate_secure_password(length=12, include_symbols=True):
     return ''.join(password)
 
 def print_password_analysis(password):
-    print(f"\n{Fore.CYAN}{'='*50}")
-    print(f"{Fore.CYAN}ANÁLISE DE SEGURANÇA DA SENHA")
-    print(f"{Fore.CYAN}{'='*50}")
+    print(f"\n{Fore.WHITE}{'='*30}")
+    print(f"{Fore.WHITE}ANÁLISE DE SEGURANÇA DA SENHA")
+    print(f"{Fore.WHITE}{'='*30}")
     
     # Verifica a força da senha
     strength = check_password_strength(password)
@@ -126,17 +126,17 @@ def print_password_analysis(password):
     print(f"{'✅' if strength['tem_caractere_especial'] else '❌'} Caracteres especiais: {'Sim' if strength['tem_caractere_especial'] else 'Não'}")
     
     # Mostra a força da senha
-    print(f"\n{Fore.WHITE}Força da senha: {strength['cor']}{strength['forca']}{Style.RESET_ALL}")
+    print(f"\n{Fore.WHITE}Força da senha: {strength['forca']}{Style.RESET_ALL}")
     
     # Verifica se a senha foi comprometida
-    print(f"\n{Fore.WHITE}Verificando vazamentos de dados...")
+    print(f"\n{Fore.WHITE}Verificando vazamentos de dados:")
     foi_comprometida, count = check_pwned_password(password)
     
     if foi_comprometida:
-        print(f"{Fore.RED}⚠️  ATENÇÃO: Esta senha foi encontrada em {count:,} vazamentos de dados!")
-        print(f"{Fore.RED}   Recomenda-se fortemente trocar esta senha.")
+        print(f"--> ATENÇÃO: Esta senha foi encontrada em {count:,} vazamentos de dados!")
+        print(f"--> Recomenda-se fortemente trocar esta senha.")
     else:
-        print(f"{Fore.GREEN}✅ Boa notícia: Esta senha não foi encontrada em vazamentos conhecidos.")
+        print(f"--> Boa notícia: Esta senha não foi encontrada em vazamentos conhecidos.")
 
 def main():
     parser = argparse.ArgumentParser(description="Verificador de Força de Senhas")
@@ -154,7 +154,7 @@ def main():
         include_symbols = not args.no_symbols
         generated_password = generate_secure_password(args.length, include_symbols)
         
-        print(f"\n{Fore.GREEN}Senha gerada: {Fore.WHITE}{generated_password}")
+        print(f"\nSenha gerada:{generated_password}")
         
         # Analisa a senha gerada
         print_password_analysis(generated_password)
@@ -164,11 +164,11 @@ def main():
         
     else:
         parser.print_help()
-        print(f"\n{Fore.YELLOW}Exemplos de uso:")
-        print(f"{Fore.WHITE}  python passwordStrengthChecker.py --password 'MinhaSenh@123'")
-        print(f"{Fore.WHITE}  python passwordStrengthChecker.py --generate")
-        print(f"{Fore.WHITE}  python passwordStrengthChecker.py --generate --length 16")
-        print(f"{Fore.WHITE}  python passwordStrengthChecker.py --generate --length 10 --no-symbols")
+        print(f"\nExemplos de uso:")
+        print(f"python passwordStrengthChecker.py --password 'MinhaSenh@123'")
+        print(f"python passwordStrengthChecker.py --generate")
+        print(f"python passwordStrengthChecker.py --generate --length 16")
+        print(f"python passwordStrengthChecker.py --generate --length 10 --no-symbols")
 
 if __name__ == "__main__":
     main()
